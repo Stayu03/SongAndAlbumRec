@@ -1,6 +1,6 @@
 import streamlit as st
-import openai 
 import pandas as pd
+import openai 
 #importOpenAI 
 
 # Set Streamlit app title and description
@@ -8,10 +8,10 @@ st.title("Music Mood Recommender 🎵")
 st.write("Tell us about your mood! We will recommend 3 songs and 1 album based on your mood!")
 
 # Add a sidebar for the OpenAI API key input
-api_key_ = st.sidebar.text_input("Enter your OpenAI API key", type="password", key="api_key_input")
+api_key = st.sidebar.text_input("Enter your OpenAI API key", type="password", key="api_key_input")
 
 # Set OpenAI API key
-client = openai.OpenAI(api_key=api_key_)
+client = openai.OpenAI(api_key=api_key)
 # Function to recommend songs and albums based on mood and language
 
 def recommend_songs_and_album(mood, language):
